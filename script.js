@@ -18,7 +18,6 @@ const technology =document.getElementById("technology")
 
 // menu show 
 menuBtn.addEventListener('click', () => {
-    
     menuBar.classList.add("responcive")
     menuBtn.style.display = "none";
     closeBtn.style.display = "block";
@@ -76,10 +75,9 @@ function fetchData(url){
         return res.text()
     }).then(function (data) {
         newData = JSON.parse(data).articles
-        showNews()
+        showNews(newData);
     });
 }
-
 
 home.addEventListener('click', () => {
     menuBar.classList.remove("responcive")
@@ -117,13 +115,8 @@ home.addEventListener('click', () => {
     })
         
 
-
-
-
-
-
 // data show on website 
-function showNews() {
+function showNews(newData) {
     let html = "";
     let line = "";
     newData.forEach(element => {
@@ -146,12 +139,10 @@ function showNews() {
                  <h3>${element["title"]}</h3>
                  </div>
                  `
-
         html += news;
         line += headLine_news;
 
     });
-
     content_box.innerHTML = html;
     headLine.innerHTML = line;
 
@@ -167,7 +158,6 @@ search.addEventListener('input',()=>{
         if(element.includes(search.value)){
             country=element;
         }
-        
     });
     console.log(country)
     url=`https://newsapi.org/v2/top-headlines?country=${country}&category=business&apiKey=e34999aaefc14fca9ecfa2931ca89c9c`
