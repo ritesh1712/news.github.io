@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>NEWS</title>
+</head>
+
+<body>
+    <!-- navigation bar -->
+    <nav class="bg-slate-400 flex justify-between">
+        <!-- news chanale logo -->
+        <div class="ml-4">
+            <div class="uppercase italic font-bold flex items-center text-2xl p-2 cursor-default">today's <span> <img
+                        class="h-20 p-2 rounded-full" src="other-items/logo.jpg" alt="logo-img"></span> </div>
+        </div>
+        <!-- menu options -->
+        <div class="lg:flex items-start lg:items-center justify-center xl:mr-40 text-xl font-semibold uppercase hidden z-10"
+            id="menuBar">
+            <ul class="flex lg:space-x-12 p-2 items-center space-y-8 lg:space-y-0 pt-12 lg:pt-2 flex-col lg:flex-row h"
+                id="ul">
+                <li class="hover:italic" id="home"><a href="#">home</a></li>
+                <li class="hover:italic" id="barkingNews"><a href="#">barking news</a></li>
+                <li class="hover:italic" id="india"><a href="#">india</a></li>
+                <li class="hover:italic" id="technology"><a href="#">technology</a></li>
+                <!-- more Language menu-->
+                <li id="language" class="hover:italic"><a href="#">language
+                        <i class="material-icons relative top-1" id="more">expand_more</i>
+                        <!-- <i class="material-icons relative top-1" style="display: none;" id="less">expand_less</i> -->
+                        <ul class="lg:absolute bg-slate-400 p-10 shadow-2xl hidden z-10" id="moreLanguage">
+                            <li>hindi</li>
+                            <li>english</li>
+                            <!-- <li></li> -->
+                        </ul>
+                    </a></li>
+                <li class="text-red-600 hover:italic animate-bounce "><a href="https://youtu.be/Cy_6-_XUW-c">
+                        <i class="material-icons relative top-1"
+                            style="font-size:24px ; font-weight:bold; color: red;">live_tv</i>
+                        live</a></li>
+            </ul>
+        </div>
+        <!-- hemberger for responcive on mobiles and ipads -->
+        <div
+            class="right-0 top-2 fixed bg-slate-400 p-2 rounded-tl-full rounded-bl-full flex justify-center items-center lg:hidden z-10">
+            <!-- menu icon-->
+            <i class="material-icons" style="font-size:24px ; font-weight:bold" id="menuBtn">menu</i>
+            <!-- close icon  -->
+            <i class="material-icons" style="font-size:24px ; font-weight:bold ; display: none;" id="closeBtn">close</i>
+        </div>
+    </nav>
+
+    <!-- bottom bar -->
+    <!-- <div class="bg-gray-300 fixed bottom-0 w-full text-center lg:hidden" id="bottomBar">
+        <ul class="flex justify-between items-center p-4 font-semibold text-xl">
+
+            <li><a href="#">
+                    <i class="material-icons" style="font-size:24px ; font-weight:bold" id="menuBtn">home</i>
+                    <div>home</div>
+                </a></li>
+
+            <li><a href="#">
+                    <i class="material-icons" style="font-size:24px ; font-weight:bold" id="menuBtn">video_library</i>
+                    <div>video</div>
+                </a></li>
+
+            <li><a href="#">
+                    <i class="material-icons" style="font-size:24px ; font-weight:bold; color: red;"
+                        id="menuBtn">live_tv</i>
+                    <div class="text-red-600">live tv</div>
+                </a></li>
+        </ul>
+    </div> -->
+
+
+<!-- search box -->
+<div class="bg-orange-600 p-8 flex justify-center items-center">
+    <input type="text" placeholder="search" id="search" class="p-2 font-semibold text-xl outline-none">
+    <div class="hidden sm:block" id="searchBtn">
+        <label for="search">
+            <i class="material-icons bg-white cursor-pointer w" style="padding: 0.63rem;">search</i>
+        </label>
+        
+    </div>
+</div>
+
+
+
+
+
+    <!-- slider  -->
+    <div class="bg-orange-400 overflow-hidden z-0">
+        <!-- heading -->
+        <h1 class="uppercase text-xl font-semibold text-center italic p-4">today headline's</h1>
+        <div class="flex justify-center items-center p-4 text-center animation " id="headLine">
+            <!-- API content  -->
+            <!-- slider -->
+        </div>
+    </div>
+
+    <!-- content section  -->
+    <div class="flex justify-between ">
+        <div class="w-full">
+            <!-- heading -->
+            <div class="flex justify-center items-center p-4 bg-orange-600 ">
+                <h1 class="uppercase text-3xl font-semibold" id="heading">top news</h1>
+            </div>
+            <div class="grid-cols-1	grid lg:grid-cols-3 md:grid-cols-2" id="content-box">
+
+                <!-- API content  -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
